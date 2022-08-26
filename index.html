@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -11,10 +11,36 @@
         <script src="/js/weather.js" defer></script>
         <!--<link rel="stylesheet" href="assets/css/style.css">-->
         <title>Weather API</title>
-</head>
-<body>
+     </head>
+     <body>
+        <nav class= "navbar navbar-dark bg-dark">
+             <div class="container-fluid">
+                <span class="navbar-brand mb-0 h1">Weather API</span>
+             </div>
+        </nav>
+
+        <div class="container">
+             <h1 class="text-center" id="top-header">Weather Data</h1>
+
+             <div class="row">
+                     <form action="" id="weatherForm">
+                             <div class="row">
+                                     <div class="col-5">
+                                        <input class="form-control" id="inputCity" name="city" type="text" placeholder="City">
+                                     </div>
+                                     <div class="col-2">
+                                        <input type="submit" class="btn btn-dark d-block w-100">
+                                     </div>
+                             </div>
+                        </form>
+                </div>
+
+                <div class="row" id="weatherTable">
+
+                </div>
+        </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
-</body>
+     </body>
 </html>
