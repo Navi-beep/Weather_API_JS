@@ -23,7 +23,7 @@ console.log('This is weather.js')
         }
 
         async function getWeatherInfo(city){
-            let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${myAPIKey}&units=imperial`);
+            let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${myAPIKey}`);
             let data = await res.json();
             return data['weatherTable']
 
@@ -84,22 +84,22 @@ console.log('This is weather.js')
 
 
             let tdHigh = document.createElement('td');
-            tdHigh.scope = 'row'
+            //tdHigh.scope = 'row'
             tdHigh.innerHTML = `${weathersData['main']['temp_max']}`;
 
 
             let tdLow = document.createElement('td');
-            tdLow.scope = 'row'
+            //tdLow.scope = 'row'
             tdLow.innerHTML = `${weathersData['main']['temp_min']}`;
 
 
             let tdCurrent = document.createElement('td');
-            tdCurrent.scope = 'row'
+            //tdCurrent.scope = 'row'
             tdCurrent.innerHTML = `${weathersData['main']['temp']}`;
 
 
             let tdFeels = document.createElement('td');
-            tdFeels.scope = 'row'
+            //tdFeels.scope = 'row'
             tdFeels.innerHTML= `${weathersData['main']['feels_like']}`;
 
 
