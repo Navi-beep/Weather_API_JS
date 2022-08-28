@@ -76,33 +76,36 @@ console.log('This is weather.js')
             let tdCity = document.createElement('td');
             tdCity.scope = 'row'
             tdCity.innerHTML = `${weathersData['name']}`;
-
+            
+            
 
             let tdCountry = document.createElement('td');
             tdCountry.scope = 'row'
             tdCountry.innerHTML = `${weathersData['sys']['country']}`;
+            
+            
 
 
             let tdHigh = document.createElement('td');
-            //tdHigh.scope = 'row'
             tdHigh.innerHTML = `${weathersData['main']['temp_max']}`;
-
+            
+           
 
             let tdLow = document.createElement('td');
-            //tdLow.scope = 'row'
             tdLow.innerHTML = `${weathersData['main']['temp_min']}`;
+            
 
 
             let tdCurrent = document.createElement('td');
-            //tdCurrent.scope = 'row'
             tdCurrent.innerHTML = `${weathersData['main']['temp']}`;
-
+            
+            
 
             let tdFeels = document.createElement('td');
-            //tdFeels.scope = 'row'
             tdFeels.innerHTML= `${weathersData['main']['feels_like']}`;
+            
 
-
+        
             tableRow.append(tdCity);
             tableRow.append(tdCountry);
             tableRow.append(tdHigh);
@@ -110,9 +113,6 @@ console.log('This is weather.js')
             tableRow.append(tdCurrent);
             tableRow.append(tdFeels);
             tableBody.append(tableRow);
-
-
-
             thead.append(trHead)
             trHead.append(thCity)
             trHead.append(thCountry)
@@ -129,10 +129,7 @@ console.log('This is weather.js')
             display.append(table)
             console.log(display)
 
-
-
     }
 
         form.addEventListener('submit', handleSubmit);
-
 }
