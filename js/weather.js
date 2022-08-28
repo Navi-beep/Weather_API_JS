@@ -43,28 +43,32 @@ console.log('This is weather.js')
             let trHead = document.createElement('tr');
 
             let thCity = document.createElement('th');
-            thCity.scope = 'col'
+            thCity.scope = 'column'
             thCity.innerHTML = 'City name'
 
             let thCountry = document.createElement('th');
-            thCountry.scope = 'col'
+            thCountry.scope = 'column'
             thCountry.innerHTML = 'Country name'
 
             let thHigh = document.createElement('th');
-            thHigh.scope = 'col'
+            thHigh.scope = 'column'
             thHigh.innerHTML = 'Temp High:'
 
             let thLow = document.createElement('th');
-            thLow.scope = 'col'
+            thLow.scope = 'column'
             thLow.innerHTML = 'Temp Low:'
 
             let thCurrent = document.createElement('th');
-            thCurrent.scope = 'col'
+            thCurrent.scope = 'column'
             thCurrent.innerHTML = 'Temp Current:'
 
             let thFeels = document.createElement('th');
-            thFeels.scope = 'col'
+            thFeels.scope = 'column'
             thFeels.innerHTML = 'Temp Feels Like:'
+
+            let thDescription = document.createElement('th');
+            thDescription.scope = 'column'
+            thDescription.innerHTML = 'Description:'
 
 
             let tableBody = document.createElement('tbody');
@@ -100,9 +104,11 @@ console.log('This is weather.js')
             tdCurrent.innerHTML = `${weathersData['main']['temp']}°F`;
             
             
-
             let tdFeels = document.createElement('td');
             tdFeels.innerHTML= `${weathersData['main']['feels_like']}°F`;
+
+            let tdDescription = document.createElement('td');
+            tdDescription.innerHTML= `${weathersData['weather'][0]['main']}`;
             
 
         
@@ -112,6 +118,7 @@ console.log('This is weather.js')
             tableRow.append(tdLow);
             tableRow.append(tdCurrent);
             tableRow.append(tdFeels);
+            tableRow.append(tdDescription);
             tableBody.append(tableRow);
             thead.append(trHead)
             trHead.append(thCity)
@@ -120,6 +127,7 @@ console.log('This is weather.js')
             trHead.append(thLow)
             trHead.append(thCurrent)
             trHead.append(thFeels)
+            trHead.append(thDescription)
             table.append(thead)
             table.append(tableBody)
 
