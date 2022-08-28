@@ -23,7 +23,7 @@ console.log('This is weather.js')
         }
 
         async function getWeatherInfo(city){
-            let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${myAPIKey}`);
+            let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${myAPIKey}`);
             let data = await res.json();
             return data;
 
