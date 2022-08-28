@@ -87,22 +87,22 @@ console.log('This is weather.js')
 
 
             let tdHigh = document.createElement('td');
-            tdHigh.innerHTML = `${weathersData['main']['temp_max']}`;
+            tdHigh.innerHTML = `${weathersData['main']['temp_max']}°F`;
             
            
 
             let tdLow = document.createElement('td');
-            tdLow.innerHTML = `${weathersData['main']['temp_min']}`;
+            tdLow.innerHTML = `${weathersData['main']['temp_min']}°F`;
             
 
 
             let tdCurrent = document.createElement('td');
-            tdCurrent.innerHTML = `${weathersData['main']['temp']}`;
+            tdCurrent.innerHTML = `${weathersData['main']['temp']}°F`;
             
             
 
             let tdFeels = document.createElement('td');
-            tdFeels.innerHTML= `${weathersData['main']['feels_like']}`;
+            tdFeels.innerHTML= `${weathersData['main']['feels_like']}°F`;
             
 
         
