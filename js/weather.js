@@ -10,7 +10,7 @@ console.log('This is weather.js')
             e.preventDefault()
 
 
-            let inputCity = e.target.inputCity.value;
+            let inputCity = e.target.city.value;
 
             let weathersData = await getWeatherInfo(inputCity)
             inputCity.value = ''
@@ -25,7 +25,7 @@ console.log('This is weather.js')
         async function getWeatherInfo(city){
             let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${myAPIKey}`);
             let data = await res.json();
-            return data['weatherTable']
+            return data;
 
     }
 
